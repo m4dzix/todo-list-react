@@ -7,13 +7,14 @@
   background-color: hsl(34, 41%, 68%);
   box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, .7);
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
   grid-gap: 10px;
+
 }
 
 .form__input {
   margin: 5px 0;
-  padding: 7px;
+  padding: 7px 0;
   border: 2px solid black;
   border-radius: 7px;
   width: 100%;
@@ -22,7 +23,7 @@
 .form__button {
   font-family: 'Lato', sans-serif;
   text-transform: uppercase;
-  padding: 7px;
+  padding: 7px 0;
   background-color: hsl(34, 84%, 15%);
   font-size: 15px;
   border: 2px solid black;
@@ -33,7 +34,7 @@
   margin: 5px 0;
   transition: 0.3s;
   width: 100%;
-  max-width: 300px;
+  max-width: 200px;
 }
 
 .form__button:hover {
@@ -48,5 +49,6 @@
     grid-template-columns: none;
     grid-auto-flow: row;
     grid-template-columns: 1;
+    justify-content: center;
   }
 }
