@@ -1,4 +1,44 @@
+# TO DO LIST
+
+![ToDoList](https://github.com/m4dzix/toDoList/blob/master/images/toDoListSmall.png?raw=true)
+
+Simple and basic to-do list - helps organise tasks.
+Made during the frontend developer course from [“youcode.pl”](https://youcode.pl).
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+**Live link:** [https://m4dzix.github.io/toDoList/](https://m4dzix.github.io/toDoList/)
+
+## How to use:
+
+### Creating task
+
+If you want to add a new task to the list, you should:
+
+1. Enter the task content on the input area.
+
+2. Confirm by clicking button `Add task` or just press enter.
+
+Task content will show up as a part of the task list.
+
+### Managing task
+
+- Mark as complete: Click green box on left from task content.
+Second click on confirmed icon will reverse 'completed' animation.
+
+- Remove task: click red icon with `x`.
+
+- Mark all tasks as completed: click on button `MARK ALL TASKS AS COMPLETED` on menubar above task list.
+
+- Hide each completed task: click the `HIDE COMPLETED TASKS` button.
+When you click again, all completed tasks will be displayed.
+
+
+## Used technologies:
+
+- HTML
+- CSS
+- JavaScript(ES6)
+- BEM convention
 
 ## Available Scripts
 
@@ -11,11 +51,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `yarn build`
 
@@ -37,32 +72,8 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Author:
+Magdalena Checinski - beginner | junior frontend developer
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Contact :
+[madlen.checinski@gmail.com](mailto:madlen.checinski@gmail.com)
