@@ -2,9 +2,9 @@ import React from "react";
 import "./style.css";
 
 const Tasks = ({ tasks,hideDoneTasks }) => (
-    <ul className = "section__taskList" > {
-      tasks.map(task => ( 
-        <li className={`section__taskItem ${task.done && hideDoneTasks ? "section__taskItem--hidden" : ""}`}> 
+    <ul className = "section__taskList" > 
+      {tasks.map((task) => ( 
+        <li key={task.id} className={`section__taskItem ${task.done && hideDoneTasks ? "section__taskItem--hidden" : ""}`}> 
           <button className="taskItem__button taskItem__button--doneTask">
             {task.done ? <i className="fas fa-check"></i> : ''}
           </button>
