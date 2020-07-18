@@ -38,6 +38,7 @@ When you click again, all completed tasks will be displayed.
 - HTML
 - CSS
 - JavaScript(ES6)
+- React (create-react-app)
 - BEM convention
 
 ## Available Scripts
