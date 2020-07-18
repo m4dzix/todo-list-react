@@ -6,7 +6,7 @@ Simple and basic to-do list - helps organise tasks.
 Made during the frontend developer course from [“youcode.pl”](https://youcode.pl).
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-**Live link:** [https://m4dzix.github.io/toDoList/](https://m4dzix.github.io/toDoList/)
+**Live link:** [https://m4dzix.github.io/todo-list-react/](https://m4dzix.github.io/todo-list-react/)
 
 ## How to use:
 
