@@ -1,9 +1,9 @@
 import React from "react";
 import "./style.css";
 
-const Buttons = ({ tasks, hideDoneTasks }) => (
+const Buttons = ({ tasks, hideDoneTasks, toggleHideDoneTasks }) => (
   <section className={`"section section__toggleButtons ${tasks.length ? "":"section__button--hidden"}`}>
-    <button className="section__button" disabled = {tasks.every(({done}) => !done)}>
+    <button onClick ={toggleHideDoneTasks} className="section__button" disabled = {tasks.every(({done}) => !done)}>
       {hideDoneTasks ? "Show" : "Hide"} completed tasks
     </button>
     <button className="section__button" disabled={tasks.every(({done}) => done)}>
