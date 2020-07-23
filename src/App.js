@@ -8,18 +8,20 @@ import Main from "./Main";
 import Wrapper from "./Wrapper";
 import Subheader from "./Subheader";
 
-const tasks = [
-  {id: 1, content: "Find a job as a developer", done: false},
-  {id: 2, content: "Eat dinner", done:true},
-];
-
 
 function App() {
   const [hideDoneTasks, setHideDoneTasks]=useState(false);
+  const [tasks, setTasks] = useState([
+    {id: 1, content: "Find a job as a developer", done: false},
+    {id: 2, content: "Eat dinner", done:true},
+  ]
+  );
 
   const toggleHideDoneTask = () => {
     setHideDoneTasks(hideDoneTasks => !hideDoneTasks);
   };
+  const removeTask = (id) => {setTasks(tasks => tasks.filter(task => task.id !== id));
+  }
 
   return (
   <Wrapper>
@@ -27,7 +29,7 @@ function App() {
     <Main>
       <Form />
       <Buttons tasks={tasks} hideDoneTasks={hideDoneTasks} toggleHideDoneTasks={toggleHideDoneTask} />
-      <Section title={<Subheader title="task list" />} body={<Tasks tasks={tasks} hideDoneTasks={hideDoneTasks} />} />
+      <Section title={<Subheader title="task list" />} body={<Tasks removeTask={removeTask} tasks={tasks} hideDoneTasks={hideDoneTasks} />} />
     </Main>
   </Wrapper>
   );
