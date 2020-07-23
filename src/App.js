@@ -11,6 +11,7 @@ import Subheader from "./Subheader";
 
 function App() {
   const [hideDoneTasks, setHideDoneTasks]=useState(false);
+  // const [allTasksDone, setAllTasksDone] = useState();
   const [tasks, setTasks] = useState([
     {id: 1, content: "Find a job as a developer", done: false},
     {id: 2, content: "Eat dinner", done:true},
@@ -29,14 +30,18 @@ function App() {
     return task;
   }));
 }
-
+const allTasksDone = () => {
+  setTasks(
+    tasks => tasks.map((task)=>({...task, done:true}))
+  );
+};
 
   return (
   <Wrapper>
        <Header title="To do list"/> 
     <Main>
       <Form />
-      <Buttons tasks={tasks} hideDoneTasks={hideDoneTasks} toggleHideDoneTasks={toggleHideDoneTask} />
+      <Buttons tasks={tasks} hideDoneTasks={hideDoneTasks}toggleHideDoneTasks={toggleHideDoneTask}  allTasksDone={allTasksDone}  />
       <Section title={<Subheader title="task list" />} body={<Tasks removeTask={removeTask} toggleDoneTask={toggleDoneTask} tasks={tasks} hideDoneTasks={hideDoneTasks} />} />
     </Main>
   </Wrapper>
