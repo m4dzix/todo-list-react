@@ -2,9 +2,13 @@ import React, {useState} from "react";
 import "./style.css";
 
 const Form = ({addNewTask}) => {
-  const [newTaskContent, setNewTaskContent] = useState("")
-  const onFormSubmit = (event)=>{event.preventDefault();
+  const [newTaskContent, setNewTaskContent] = useState("");
+
+  const onFormSubmit = (event) => {
+  event.preventDefault();
   addNewTask(newTaskContent.trim());
+  setNewTaskContent("");
+
 };
 
 return(
