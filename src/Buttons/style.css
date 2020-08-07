@@ -11,11 +11,13 @@
 }
 
 .section__button {
-  border: none;
-  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 7px;
+  background-color: hsl(34, 41%, 60%);
   text-shadow: 2px 2px 2px #eee;
   text-transform: uppercase;
   padding: 5px;
+  margin-right: 5px;
 }
 
 @media (max-width:414px) and (orientation:portrait) {
@@ -28,6 +30,7 @@
 .section__button:hover {
   cursor: pointer;
   color: #333;
+  background-color: hsl(34, 41%, 63%);
 }
 
 .section__button--hidden {
