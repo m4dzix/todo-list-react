@@ -8,16 +8,17 @@ import Main from "./Main";
 import Wrapper from "./Wrapper";
 import Subheader from "./Subheader";
 
+const getTasks = ()=> {
+  const tasksSavedInLocalStorage = localStorage.getItem("tasks");
+  return tasksSavedInLocalStorage ? 
+  JSON.parse(tasksSavedInLocalStorage) : [] ;
+};
+
 
 function App() {
   
   const [hideDoneTasks, setHideDoneTasks]=useState(false);
-  const tasksSavedInlocalStorage = localStorage.getItem("tasks")
-
-  const [tasks, setTasks] = useState(
-    tasksSavedInlocalStorage ? JSON.parse(tasksSavedInlocalStorage) : []
-  );
-
+  const [tasks, setTasks] = useState(getTasks);
 
   useEffect(()=>{ 
     localStorage.setItem ("tasks", JSON.stringify(tasks))
