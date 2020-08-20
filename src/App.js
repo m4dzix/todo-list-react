@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Form from "./Form";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
@@ -10,16 +10,25 @@ import Subheader from "./Subheader";
 
 
 function App() {
+  
   const [hideDoneTasks, setHideDoneTasks]=useState(false);
-  const [tasks, setTasks] = useState([
-    {id: 1, content: "Find a job as a developer", done: false},
-    {id: 2, content: "Eat dinner", done:true},
-  ]);
- 
+  const tasksSavedInlocalStorage = localStorage.getItem("tasks")
+
+  const [tasks, setTasks] = useState(
+    tasksSavedInlocalStorage ? JSON.parse(tasksSavedInlocalStorage) : []
+  );
+
+
+  useEffect(()=>{ 
+    localStorage.setItem ("tasks", JSON.stringify(tasks))
+  },[tasks]);
+
+
   const toggleHideDoneTask = () => {
     setHideDoneTasks(hideDoneTasks => !hideDoneTasks);
   };
-  const removeTask = (id) => {setTasks(tasks => tasks.filter(task => task.id !== id));
+  const removeTask = (id) => {setTasks(tasks =>
+     tasks.filter(task => task.id !== id));
   };
   const toggleDoneTask = (id) => {
     setTasks(tasks => tasks.map(task => {
@@ -35,19 +44,24 @@ const allTasksDone = () => {
   );
 };
 
-const addNewTask = (newTaskContent)=>{
+const addNewTask = (newTaskContent, tasks)=>{
   setTasks(tasks => [...tasks,
   {content: newTaskContent,
     done: false,
     id: tasks.length? tasks[tasks.length-1].id + 1 : 1
   },
-])}
+])
+
+};
+
+
+
 
   return (
   <Wrapper>
        <Header title="To do list"/> 
     <Main>
-      <Form addNewTask={addNewTask} />
+      <Form tasks={tasks} addNewTask={addNewTask} />
       <Buttons tasks={tasks} hideDoneTasks={hideDoneTasks}toggleHideDoneTasks={toggleHideDoneTask}  allTasksDone={allTasksDone}  />
       <Section title={<Subheader title="task list" />} body={<Tasks removeTask={removeTask} toggleDoneTask={toggleDoneTask} tasks={tasks} hideDoneTasks={hideDoneTasks} />} />
     </Main>
