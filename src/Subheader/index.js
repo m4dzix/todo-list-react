@@ -1,10 +1,10 @@
 import React from "react";
-import "./style.css";
+import {SubheaderTitle} from "./styled"
 
 const Subeader = ({ title }) => (
-  <h2 className="section__header">
+  <SubheaderTitle>
     {title}
-  </h2>
+  </SubheaderTitle>
 );
 
 export default Subeader;

@@ -1,9 +1,10 @@
 import React from "react";
-import "./style.css";
+import { Wrap } from "./styled"
+
 
 const Wrapper = ({ children }) => (
-  <div className="wrapper">
+  <Wrap>
     {children}
-  </div>
+  </Wrap>
 );
 export default Wrapper;

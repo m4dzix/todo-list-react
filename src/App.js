@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect,} from 'react';
 import Form from "./Form";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
@@ -28,9 +28,11 @@ function App() {
   const toggleHideDoneTask = () => {
     setHideDoneTasks(hideDoneTasks => !hideDoneTasks);
   };
+
   const removeTask = (id) => {setTasks(tasks =>
      tasks.filter(task => task.id !== id));
   };
+
   const toggleDoneTask = (id) => {
     setTasks(tasks => tasks.map(task => {
     if (task.id === id){
@@ -38,7 +40,8 @@ function App() {
     }
     return task;
   }));
-}
+};
+
 const allTasksDone = () => {
   setTasks(
     tasks => tasks.map((task)=>({...task, done:true}))
@@ -56,14 +59,12 @@ const addNewTask = (newTaskContent, tasks)=>{
 };
 
 
-
-
-  return (
+return (
   <Wrapper>
        <Header title="To do list"/> 
     <Main>
       <Form tasks={tasks} addNewTask={addNewTask} />
-      <Buttons tasks={tasks} hideDoneTasks={hideDoneTasks}toggleHideDoneTasks={toggleHideDoneTask}  allTasksDone={allTasksDone}  />
+      <Buttons tasks={tasks} hideDoneTasks={hideDoneTasks} toggleHideDoneTasks={toggleHideDoneTask}  allTasksDone={allTasksDone}  />
       <Section title={<Subheader title="task list" />} body={<Tasks removeTask={removeTask} toggleDoneTask={toggleDoneTask} tasks={tasks} hideDoneTasks={hideDoneTasks} />} />
     </Main>
   </Wrapper>

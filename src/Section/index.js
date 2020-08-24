@@ -1,11 +1,12 @@
 import React from "react";
-import "./style.css";
+import { StyledSection } from "./styled"
+
 
 const Section = ({ title, body }) => (
-  <section className="section">
+  <StyledSection>
     {title}
     {body}
-  </section>
+  </StyledSection>
 );
 
 export default Section;

@@ -1,15 +1,20 @@
 import React from "react";
-import "./style.css";
+import {ToggleButtons, Button} from "./styled"
 
-const Buttons = ({ tasks, hideDoneTasks, toggleHideDoneTasks, allTasksDone}) => (
-  <section className={`"section section__toggleButtons ${tasks.length ? "":"section__button--hidden"}`}>
-    <button onClick ={toggleHideDoneTasks} className="section__button" disabled = {tasks.every(({done}) => !done)}>
-      {hideDoneTasks ? "Show" : "Hide"} completed tasks
-    </button>
-    <button  onClick={allTasksDone}  className="section__button" disabled={tasks.every(({done}) => done)}>
+const Buttons = ({ tasks, hideDoneTasks, 
+  toggleHideDoneTasks, allTasksDone}) => (
+  <ToggleButtons
+  hidden = {!tasks.length}>
+    <Button 
+    onClick ={toggleHideDoneTasks}
+    disabled = {tasks.every(({done}) => !done)}>
+    {hideDoneTasks ? "Show" : "Hide"} completed tasks
+    </Button >
+    <Button  onClick={allTasksDone}
+     disabled={tasks.every(({done}) => done)}>
         Mark all tasks as completed
-    </button>
-  </section>
+    </Button >
+  </ToggleButtons>
 );
 
 export default Buttons;
