@@ -3,6 +3,10 @@ import styled, { css } from "styled-components";
 export const List = styled.ul`
   list-style: none;
   padding: 5px;
+
+  @media (max-width: 360px) and (orientation: portrait) {
+    padding: 0px;
+  }
 `;
 export const Item = styled.li`
   display: flex;
@@ -19,10 +23,16 @@ export const Item = styled.li`
     css`
       display: none;
     `}
+
+  @media (max-width: 360px) and (orientation: portrait) {
+    margin: 0;
+    max-width: 100%;
+  }
 `;
 export const Button = styled.button`
   border: none;
-  width: 30px;
+  width: 100%;
+  max-width: 30px;
   height: 30px;
   margin: 10px;
   background-color: chartreuse;

@@ -11,11 +11,15 @@ export const ToggleButtons = styled.section`
   margin: 0 50px;
   padding: 5px;
 
+  @media (max-width: 414px) and (orientation: portrait) {
+    margin: 0px 10px;
+  }
+
   ${({ hidden }) =>
     hidden &&
     css`
       display: none;
-    `};
+    `}
 `;
 
 export const Button = styled.button`

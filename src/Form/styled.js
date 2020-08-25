@@ -11,6 +11,11 @@ export const StyledForm = styled.form`
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-gap: 20px;
+
+  @media (max-width: 414px) and (orientation: portrait) {
+    grid-template-columns: 1fr;
+    margin: 10px 20px;
+  }
 `;
 export const Input = styled.input`
   padding: 7px 0;
@@ -38,7 +43,7 @@ export const Button = styled.button`
   }
 
   @media (max-width: 414px) and (orientation: portrait) {
-    margin: 30px 10px;
+    margin: 5px 10px;
     grid-template-columns: none;
     grid-auto-flow: row;
     grid-template-columns: 1;
