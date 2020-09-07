@@ -2,24 +2,26 @@ import styled from "styled-components";
 
 export const StyledForm = styled.form`
   margin: 30px 50px;
-  border: 3px solid black;
+  border: 3px solid ${({ theme }) => theme.colors.black};
   border-radius: 10px;
   padding: 20px;
   text-align: center;
-  background-color: hsl(34, 41%, 68%);
-  box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, 0.7);
+  background-color: ${({ theme }) => theme.colors.tan};
+  box-shadow: 2px 2px 3px 3px
+    ${({ theme }) => theme.colors.darkTransparentBlack};
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-gap: 20px;
 
-  @media (max-width: 414px) and (orientation: portrait) {
+  @media (max-width: ${({ theme }) =>
+      theme.breakpoints.maxWidth}px) and (orientation: portrait) {
     grid-template-columns: 1fr;
     margin: 10px 20px;
   }
 `;
 export const Input = styled.input`
   padding: 7px 0;
-  border: 2px solid black;
+  border: 2px solid ${({ theme }) => theme.colors.black};
   border-radius: 7px;
   width: 100%;
 `;
@@ -27,22 +29,24 @@ export const Button = styled.button`
   font-family: "Lato", sans-serif;
   text-transform: uppercase;
   padding: 7px 0;
-  background-color: hsl(34, 84%, 15%);
+  background-color: ${({ theme }) => theme.colors.darkEbony};
   font-size: 15px;
-  border: 2px solid black;
-  color: white;
+  border: 2px solid ${({ theme }) => theme.colors.black};
+  color: ${({ theme }) => theme.colors.white};
   border-radius: 7px;
-  box-shadow: 2px 1px 2px 2px rgba(0, 0, 0, 0.4);
-  text-shadow: 1px 1px 2px #222;
+  box-shadow: 2px 1px 2px 2px
+    ${({ theme }) => theme.colors.lightTrnsparentBlack};
+  text-shadow: 1px 1px 2px ${({ theme }) => theme.colors.mineShft};
   transition: 0.3s;
 
   &:hover {
-    background-color: hsl(34, 84%, 11%);
+    filter: brightness(110%);
     cursor: pointer;
     transform: scaleX(1.1);
   }
 
-  @media (max-width: 414px) and (orientation: portrait) {
+  @media (max-width: ${({ theme }) =>
+      theme.breakpoints.maxWidth}px) and (orientation: portrait) {
     margin: 5px 10px;
     grid-template-columns: none;
     grid-auto-flow: row;

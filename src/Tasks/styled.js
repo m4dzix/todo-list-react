@@ -4,7 +4,8 @@ export const List = styled.ul`
   list-style: none;
   padding: 5px;
 
-  @media (max-width: 360px) and (orientation: portrait) {
+  @media (max-width: ${({ theme }) =>
+      theme.breakpoints.maxWidth}px) and (orientation: portrait) {
     padding: 0px;
   }
 `;
@@ -24,7 +25,8 @@ export const Item = styled.li`
       display: none;
     `}
 
-  @media (max-width: 360px) and (orientation: portrait) {
+  @media (max-width: ${({ theme }) =>
+    theme.breakpoints.maxWidth}px) and (orientation: portrait) {
     margin: 0;
     max-width: 100%;
   }
@@ -35,34 +37,34 @@ export const Button = styled.button`
   max-width: 30px;
   height: 30px;
   margin: 10px;
-  background-color: chartreuse;
-  box-shadow: 0.5px 0.5px 3px 3px black;
+  background-color: ${({ theme }) => theme.colors.chartreuse};
+  box-shadow: 0.5px 0.5px 3px 3px ${({ theme }) => theme.colors.black};
 
   ${({ doneTasks }) =>
     doneTasks &&
     css`
-      background-color: chartreuse;
+      background-color: ${({ theme }) => theme.colors.chartreuse};
       transition: 0.3s;
       transition: 0.3s;
 
       &:hover {
-        background-color: hsl(90, 100%, 40%);
+        filter: brightness (110%);
       }
       &:active {
-        background-color: hsl(90, 100%, 30%);
+        filter: brightness(120%);
       }
     `};
 
   ${({ removeTasks }) =>
     removeTasks &&
     css`
-      background-color: crimson;
+      background-color: ${({ theme }) => theme.colors.crimson};
 
       &:hover {
-        background-color: hsl(348, 83%, 37%);
+        filter: brightness(110%);
       }
       &:active {
-        background-color: hsl(348, 83%, 27%);
+        filter: brightness(120%);
       }
     `};
 `;
