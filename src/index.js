@@ -10,6 +10,7 @@ import { GlobalStyle } from "./GlobalStyle";
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
+      <GlobalStyle />
       <App />
     </ThemeProvider>
   </React.StrictMode>,
