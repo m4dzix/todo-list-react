@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useTasks } from "../../useTasks";
+import React from "react";
 import Form from "./Form";
 import TasksList from "./TasksList";
 import Buttons from "./Buttons";
@@ -10,42 +9,13 @@ import Wrapper from "../../common/Wrapper";
 import Subheader from "../../common/Subheader";
 
 function Tasks() {
-  const [hideDoneTasks, setHideDoneTasks] = useState(false);
-
-  const toggleHideDoneTask = () => {
-    setHideDoneTasks((hideDoneTasks) => !hideDoneTasks);
-  };
-
-  const {
-    tasks,
-    removeTask,
-    toggleDoneTask,
-    allTasksDone,
-    addNewTask,
-  } = useTasks();
-
   return (
     <Wrapper>
       <Header title="To do list" />
       <Main>
-        <Form tasks={tasks} addNewTask={addNewTask} />
-        <Buttons
-          tasks={tasks}
-          hideDoneTasks={hideDoneTasks}
-          toggleHideDoneTasks={toggleHideDoneTask}
-          allTasksDone={allTasksDone}
-        />
-        <Section
-          title={<Subheader title="task list" />}
-          body={
-            <TasksList
-              removeTask={removeTask}
-              toggleDoneTask={toggleDoneTask}
-              tasks={tasks}
-              hideDoneTasks={hideDoneTasks}
-            />
-          }
-        />
+        <Form />
+        <Buttons />
+        <Section title={<Subheader title="task list" />} body={<TasksList />} />
       </Main>
     </Wrapper>
   );
