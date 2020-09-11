@@ -25,7 +25,7 @@ Task content will show up as a part of the task list.
 - Mark as complete: Click green box on left from task content.
   Second click on confirmed icon will reverse 'completed' animation.
 
-- Remove task: click red icon with `x`.
+- Remove task: click red icon with trash.
 
 - Mark all tasks as completed: click on button `MARK ALL TASKS AS COMPLETED` on menubar above task list.
 
@@ -37,7 +37,7 @@ Task content will show up as a part of the task list.
 - HTML
 - CSS
 - JavaScript(ES6)
-- React (create-react-app, react-redux)
+- React (create-react-app, react-redux, styled-components)
 - BEM convention
 
 ## Available Scripts
