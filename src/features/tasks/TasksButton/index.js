@@ -1,12 +1,13 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Wrapper } from "./styled";
 import { Button } from "../styledButton";
-import { fetchExampleTasks } from "../tasksSlice";
+import { fetchExampleTasks, selectLoadingExampleTasks } from "../tasksSlice";
 
 const TasksButton = () => {
   const dispatch = useDispatch();
-
+  const isLoading = useSelector(selectLoadingExampleTasks);
+  console.log(isLoading);
   return (
     <Wrapper>
       <Button
@@ -14,7 +15,7 @@ const TasksButton = () => {
           dispatch(fetchExampleTasks());
         }}
       >
-        Add example tasks
+        {isLoading ? "Loading..." : "Add example tasks"}
       </Button>
     </Wrapper>
   );
