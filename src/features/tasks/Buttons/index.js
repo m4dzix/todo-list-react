@@ -1,5 +1,6 @@
 import React from "react";
-import { ToggleButtons, Button } from "./styled";
+import { ToggleButtons } from "./styled";
+import { Button } from "../styledButton";
 import { useSelector, useDispatch } from "react-redux";
 import { selectTasks, toggleHideDoneTasks, allTasksDone } from "../tasksSlice";
 
