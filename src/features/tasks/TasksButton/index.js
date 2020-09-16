@@ -7,7 +7,6 @@ import { fetchExampleTasks, selectLoadingExampleTasks } from "../tasksSlice";
 const TasksButton = () => {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectLoadingExampleTasks);
-  console.log(isLoading);
   return (
     <Wrapper>
       <Button
