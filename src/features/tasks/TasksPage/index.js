@@ -3,11 +3,11 @@ import Form from "./Form";
 import TasksList from "./TasksList";
 import Buttons from "./Buttons";
 import TasksButton from "./TasksButton";
-import Section from "../../common/Section";
-import Header from "../../common/Header";
-import Main from "../../common/Main";
-import Wrapper from "../../common/Wrapper";
-import Subheader from "../../common/Subheader";
+import Section from "../../../common/Section";
+import Header from "../../../common/Header";
+import Main from "../../../common/Main";
+import Wrapper from "../../../common/Wrapper";
+import Subheader from "../../../common/Subheader";
 
 function Tasks() {
   return (

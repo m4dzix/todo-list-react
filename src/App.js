@@ -5,8 +5,8 @@ import {
   Switch,
   Route, Redirect
 } from "react-router-dom";
-import Tasks from "./features/tasks/Tasks";
-import Author from "./features/author/Author"
+import TasksPage from "./features/tasks/TasksPage";
+import AuthorPage from "./features/author/AuthorPage"
 export default () => (
   <HashRouter>
   <nav>
@@ -19,8 +19,8 @@ export default () => (
        </li>
     </ul>
     <Switch>
-      <Route path= "/tasks"><Tasks/></Route>
-      <Route path="/author"><Author/></Route>
+      <Route path= "/tasks"><TasksPage/></Route>
+      <Route path="/author"><AuthorPage/></Route>
       <Route pat ="/"><Redirect to = "/tasks"></Redirect> </Route>
     </Switch>
 </nav>
