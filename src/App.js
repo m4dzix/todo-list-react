@@ -1,14 +1,14 @@
 import React from "react";
 import {
-  BrowserRouter,
+  HashRouter,
   Link,
   Switch,
-  Route
+  Route, Redirect
 } from "react-router-dom";
 import Tasks from "./features/tasks/Tasks";
 import Author from "./features/author/Author"
 export default () => (
-  <BrowserRouter>
+  <HashRouter>
   <nav>
     <ul>
       <li>
@@ -21,8 +21,8 @@ export default () => (
     <Switch>
       <Route path= "/tasks"><Tasks/></Route>
       <Route path="/author"><Author/></Route>
+      <Route pat ="/"><Redirect to = "/tasks"></Redirect> </Route>
     </Switch>
-   
 </nav>
-  </BrowserRouter>
+  </HashRouter>
 )
