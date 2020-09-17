@@ -2,18 +2,21 @@ import React from "react";
 import { ToggleButtons } from "./styled";
 import { Button } from "../styledButton";
 import { useSelector, useDispatch } from "react-redux";
-import { selectTasks, toggleHideDoneTasks, allTasksDone } from "../tasksSlice";
+import { selectTasksState, toggleHideDoneTasks, allTasksDone, selectAreTasksEmpty, selectAreTasksUndone, selectIsEveryTaskDone } from "../tasksSlice";
 
 const Buttons = () => {
-  const { tasks, hideDoneTasks } = useSelector(selectTasks);
+  const { tasks, hideDoneTasks } = useSelector(selectTasksState);
+  const areTasksEmpty = useSelector(selectAreTasksEmpty);
+  const areTasksUndone = useSelector(selectAreTasksUndone);
+  const isEveryTasksDone = useSelector(selectIsEveryTaskDone);
   const dispatch = useDispatch();
   return (
-    <ToggleButtons hidden={!tasks.length}>
+    <ToggleButtons hidden={areTasksEmpty}>
       <Button
         onClick={() => {
           dispatch(toggleHideDoneTasks());
         }}
-        disabled={tasks.every(({ done }) => !done)}
+        disabled={areTasksUndone}
       >
         {hideDoneTasks ? "Show" : "Hide"} completed tasks
       </Button>
@@ -21,7 +24,7 @@ const Buttons = () => {
         onClick={() => {
           dispatch(allTasksDone(tasks.done));
         }}
-        disabled={tasks.every(({ done }) => done)}
+        disabled={isEveryTasksDone}
       >
         Mark all tasks as completed
       </Button>
