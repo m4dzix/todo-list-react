@@ -1,8 +1,8 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { List, Item, Button, Icon, Content } from "./styled";
+import { List, Item, Button, Icon, Content, StyledLink } from "./styled";
 import { toggleTasksDone, removeTasks, selectHideDone, selectTasksByQuery } from "../../tasksSlice";
-import {Link, useLocation} from "react-router-dom";
+import { useLocation} from "react-router-dom";
 import searchQueryParamsName from "../searchQueryParamsName";
 const TasksList = () => {
 
@@ -24,7 +24,7 @@ const TasksList = () => {
           >
             {task.done ? <Icon className="fas fa-check"></Icon> : ""}
           </Button>
-          <Content done={task.done}><Link to = {`/tasks/${task.id}`}>{task.content}</Link> </Content>
+          <Content done={task.done}><StyledLink to = {`/tasks/${task.id}`}>{task.content}</StyledLink> </Content>
           <Button
             removeTasks
             onClick={() => {
