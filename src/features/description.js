@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const Info = styled.p `
+export const Description = styled.p `
 text-shadow:none;
 padding:0 10px;
 `
