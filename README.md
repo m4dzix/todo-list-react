@@ -18,6 +18,8 @@ If you want to add a new task to the list, you should:
 
 2. Confirm by clicking button `Add task` or just press enter.
 
+3. You can also add example tasks by cliking button `Add example tasks`
+
 Task content will show up as a part of the task list.
 
 ### Managing task
@@ -32,12 +34,24 @@ Task content will show up as a part of the task list.
 - Hide each completed task: click the `HIDE COMPLETED TASKS` button.
   When you click again, all completed tasks will be displayed.
 
+- See task details: click to task content
+
 ## Used technologies:
 
 - HTML
 - CSS
 - JavaScript(ES6)
-- React (create-react-app, react-redux, styled-components)
+- React
+- create-react-app
+- JSX
+- react-redux
+- redux-saga
+- @reduxjs/toolkit
+- react-router
+- Hooks
+- Custom Hooks
+- Styled-components
+- localStorage
 - BEM convention
 
 ## Available Scripts
