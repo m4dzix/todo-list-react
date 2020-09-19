@@ -19,12 +19,19 @@ export const StyledForm = styled.form`
     margin: 10px 20px;
   }
 `;
+
+export const SearchForm = styled(StyledForm)`
+  grid-template-columns: 1fr;
+
+`
+
 export const Input = styled.input`
   padding: 7px 0;
   border: 2px solid ${({ theme }) => theme.colors.black};
   border-radius: 7px;
   width: 100%;
 `;
+
 export const Button = styled.button`
   font-family: "Lato", sans-serif;
   text-transform: uppercase;

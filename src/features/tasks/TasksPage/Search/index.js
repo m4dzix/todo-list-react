@@ -1,6 +1,6 @@
 import React from "react";
 import searchQueryParamsName from "../searchQueryParamsName";
-import { StyledForm, Input} from "./styled";
+import { SearchForm , Input} from "../input";
 import {useQueryParameters} from "./queryParameters/useQueryParameters"
 import { useReplaceQueryParameters } from "./queryParameters/useReplaceQueryParameter";
 
@@ -17,13 +17,13 @@ import { useReplaceQueryParameters } from "./queryParameters/useReplaceQueryPara
     };
 
     return (
-    <StyledForm>
+    <SearchForm>
         <Input
           placeholder="Filter tasks"
           value = {query || ""}
           onChange = {onInputChange} 
         /> 
-    </StyledForm>
+    </SearchForm>
   );
   };
 export default Search;
