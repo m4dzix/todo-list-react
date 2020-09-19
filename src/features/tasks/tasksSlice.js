@@ -1,9 +1,5 @@
-import {
-  createSlice
-} from "@reduxjs/toolkit";
-import {
-  getTasksfromLocalStorage
-} from "./tasksLocalStorage";
+import { createSlice } from "@reduxjs/toolkit";
+import { getTasksfromLocalStorage } from "./tasksLocalStorage";
 
 const tasksSlice = createSlice({
   name: "tasks",
@@ -13,11 +9,7 @@ const tasksSlice = createSlice({
     loading: false,
   },
   reducers: {
-    addTask: ({
-      tasks
-    }, {
-      payload
-    }) => {
+    addTask: ({ tasks }, { payload }) => {
       tasks.push(payload);
     },
     toggleHideDoneTasks: (state) => {
@@ -27,9 +19,7 @@ const tasksSlice = createSlice({
       const index = state.tasks.findIndex((task) => task.id === action.payload);
       state.tasks[index].done = !state.tasks[index].done;
     },
-    removeTasks: ({
-      tasks
-    }, action) => {
+    removeTasks: ({ tasks }, action) => {
       const index = tasks.findIndex((task) => task.id === action.payload);
       tasks.splice(index, 1);
     },
@@ -37,14 +27,10 @@ const tasksSlice = createSlice({
       state.tasks.forEach((task) => (task.done = true));
     },
     fetchExampleTasks: () => {},
-    setTasks: (state, {
-      payload: tasks
-    }) => {
+    setTasks: (state, { payload: tasks }) => {
       state.tasks = tasks;
     },
-    loadingExampleTasks: (state, {
-      payload
-    }) => {
+    loadingExampleTasks: (state, { payload }) => {
       state.loading = payload;
     },
   },
@@ -63,23 +49,24 @@ export const {
 export const selectTasksState = (state) => state.tasks;
 export const selectTasks = (state) => selectTasksState(state).tasks;
 export const selectHideDone = (state) => selectTasksState(state).hideDoneTasks;
-export const selectAreTasksUndone = (state) => {  selectTasks(state).every(({
-    done
-  }) => !done)};
+export const selectAreTasksUndone = (state) => {
+  selectTasks(state).every(({ done }) => !done);
+};
 export const selectIsEveryTaskDone = (state) =>
-  selectTasks(state).every(({
-    done
-  }) => done);
+  selectTasks(state).every(({ done }) => done);
 export const selectAreTasksEmpty = (state) => selectTasks(state).length === 0;
 export const selectLoadingExampleTasks = (state) => state.tasks.loading;
-export const getTaskById = (state, taskId) => selectTasks(state).find(({ id }) => id === taskId);
-export const selectTasksByQuery = (state, query) => {const tasks = selectTasks(state);
+export const getTaskById = (state, taskId) =>
+  selectTasks(state).find(({ id }) => id === taskId);
+export const selectTasksByQuery = (state, query) => {
+  const tasks = selectTasks(state);
 
-  if (!query || query.trim() === ""){
+  if (!query || query.trim() === "") {
     return tasks;
-  } 
-  return tasks.filter(({ content }) => content.toUpperCase().includes(query.trim().toUpperCase()));
+  }
+  return tasks.filter(({ content }) =>
+    content.toUpperCase().includes(query.trim().toUpperCase())
+  );
 };
-
 
 export default tasksSlice.reducer;

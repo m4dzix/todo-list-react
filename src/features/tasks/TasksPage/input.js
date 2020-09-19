@@ -22,8 +22,7 @@ export const StyledForm = styled.form`
 
 export const SearchForm = styled(StyledForm)`
   grid-template-columns: 1fr;
-
-`
+`;
 
 export const Input = styled.input`
   padding: 7px 0;

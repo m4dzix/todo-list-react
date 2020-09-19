@@ -13,5 +13,5 @@ export const Title = styled.h1`
   box-shadow: 5px 5px 2px 2px
     ${({ theme }) => theme.colors.lightTransparentBlack};
   text-shadow: 4px 4px 2px ${({ theme }) => theme.colors.mineShaft};
-  letter-spacing: 2px;
+  letter-spacing: 2pxF;
 `;

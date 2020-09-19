@@ -13,6 +13,7 @@ const TasksButton = () => {
         onClick={() => {
           dispatch(fetchExampleTasks());
         }}
+        disabled={isLoading}
       >
         {isLoading ? "Loading..." : "Add example tasks"}
       </Button>

@@ -9,9 +9,8 @@ import Main from "../../../common/Main";
 import Wrapper from "../../../common/Wrapper";
 import Subheader from "../../../common/Subheader";
 import Search from "./Search";
+
 function TasksPage() {
-
-
   return (
     <Wrapper>
       <Header title="To do list" />
@@ -24,6 +23,6 @@ function TasksPage() {
       </Main>
     </Wrapper>
   );
-}
+};
 
 export default TasksPage;

@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const List = styled.ul`
   list-style: none;
@@ -85,9 +85,6 @@ export const Content = styled.p`
 `;
 
 export const StyledLink = styled(Link)`
-color:${({ theme }) => theme.colors.black};
-text-decoration:none;
-&.hover{
-  cursor:pointer;
-}
-`
+  color: ${({ theme }) => theme.colors.black};
+  text-decoration: none;
+`;
