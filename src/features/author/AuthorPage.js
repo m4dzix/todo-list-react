@@ -19,7 +19,7 @@ function Author() {
                 Hi! 😃 <br></br>I am a junior frontend developer. I have been
                 learning programming since 2020. I started with the{" "}
                 <strong>"Become a Frontend Developer"</strong> course at Youcode
-                Academy. This To Do List is one of the applications written for
+                Academy. This To Do List is one of the applications made for
                 this course.
               </>
             </Description>
