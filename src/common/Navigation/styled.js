@@ -4,14 +4,10 @@ import { NavLink } from "react-router-dom";
 const activeClassName = "active";
 
 export const Nav = styled.nav`
-  text-transform: uppercase;
   margin: 5px;
   border: 3px solid ${({ theme }) => theme.colors.black};
-  color: ${({ theme }) => theme.colors.white};
   border-radius: 10px;
   background-color: ${({ theme }) => theme.colors.spicyMix};
-  text-shadow: 2px 2px 1px ${({ theme }) => theme.colors.mineShaft};
-  letter-spacing: 2px;
 `;
 
 export const List = styled.ul`
@@ -19,10 +15,13 @@ export const List = styled.ul`
   justify-content: center;
   margin: 0 auto;
   list-style: none;
+  text-shadow: 2px 2px 1px ${({ theme }) => theme.colors.mineShaft};
+  color: ${({ theme }) => theme.colors.white};
+  letter-spacing: 2px;
+  text-transform: uppercase;
 `;
 
 export const Item = styled.li`
- 
   font-size: 18px;
   margin: 10px;
 `;
