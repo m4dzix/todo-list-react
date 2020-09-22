@@ -1,8 +1,10 @@
 import React from "react";
 import searchQueryParamsName from "../searchQueryParamsName";
 import { SearchForm, Input } from "../input";
-import { useQueryParameters } from "./queryParameters/useQueryParameters";
-import { useReplaceQueryParameters } from "./queryParameters/useReplaceQueryParameter";
+import {
+  useQueryParameters,
+  useReplaceQueryParameters,
+} from "../../queryParameters";
 
 const Search = () => {
   const query = useQueryParameters(searchQueryParamsName);
