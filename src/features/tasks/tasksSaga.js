@@ -23,7 +23,6 @@ export function* fetchExampleTasksHandler() {
     yield put(setTasks(exampleTasks));
     yield put(loadingExampleTasks(false));
   } catch (error) {
-    yield call(console.error, error);
     yield call(alert, "Oops, something's wrong, sorry ");
     yield put(loadingExampleTasks(false));
   }
