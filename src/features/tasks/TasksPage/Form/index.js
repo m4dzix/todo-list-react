@@ -3,6 +3,7 @@ import { StyledForm, Input, Button } from "../input";
 import { useDispatch } from "react-redux";
 import { addTask } from "../../tasksSlice";
 import { nanoid } from "@reduxjs/toolkit";
+import { newDate } from "../../getDate";
 
 const Form = () => {
   const [newTaskContent, setNewTaskContent] = useState("");
@@ -14,15 +15,7 @@ const Form = () => {
     if (contentTrimmed === "") {
       return;
     }
-    const addNewTaskDate = new Date().toLocaleDateString("en-GB", {
-      hour: "numeric",
-      minute: "numeric",
-      second: "numeric",
-      weekday: "long",
-      day: "numeric",
-      month: "long",
-      year: "numeric",
-    });
+    const addNewTaskDate = newDate();
     dispatch(
       addTask({
         content: contentTrimmed,
