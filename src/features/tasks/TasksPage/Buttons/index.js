@@ -6,6 +6,7 @@ import {
   selectTasksState,
   toggleHideDoneTasks,
   allTasksDone,
+  removeAllTasks,
   selectAreTasksEmpty,
   selectAreTasksUndone,
   selectIsEveryTaskDone,
@@ -34,6 +35,13 @@ const Buttons = () => {
         disabled={isEveryTasksDone}
       >
         Mark all tasks as completed
+      </Button>
+      <Button
+        onClick={() => {
+          dispatch(removeAllTasks());
+        }}
+      >
+        Remove all tasks
       </Button>
     </ToggleButtons>
   );
