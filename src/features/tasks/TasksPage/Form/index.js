@@ -14,11 +14,21 @@ const Form = () => {
     if (contentTrimmed === "") {
       return;
     }
+    const addNewTaskDate = new Date().toLocaleDateString("en-GB", {
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+      weekday: "long",
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    });
     dispatch(
       addTask({
         content: contentTrimmed,
         done: false,
         id: nanoid(),
+        date: addNewTaskDate,
       })
     );
 

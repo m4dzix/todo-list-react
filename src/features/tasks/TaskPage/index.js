@@ -24,7 +24,9 @@ function TaskPage() {
           body={
             <Description>
               <strong>Completed: </strong>
-              {task.done ? "Yes 👍" : "No 😟"}{" "}
+              {task.done ? "Yes 👍" : "No 😟"} <br></br>
+              <strong>Task added on: </strong>
+              {task ? task.date : "nie ma zadania"}
             </Description>
           }
         />
