@@ -22,6 +22,8 @@ If you want to add a new task to the list, you should:
 
 Task content will show up as a part of the task list.
 
+![AddTasks](src/access/AddTasks.gif)
+
 ### Managing task
 
 - Mark as complete: Click green box on left from task content.
@@ -35,6 +37,8 @@ Task content will show up as a part of the task list.
   When you click again, all completed tasks will be displayed.
 
 - See task details: click to task content
+
+![Actions](src/access/Actions.gif)
 
 ## Used technologies:
 
