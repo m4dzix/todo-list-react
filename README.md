@@ -44,7 +44,6 @@ Task content will show up as a part of the task list.
 
 - HTML
 - CSS
-- JavaScript(ES6)
 - React
 - create-react-app
 - JSX
@@ -56,7 +55,6 @@ Task content will show up as a part of the task list.
 - Custom Hooks
 - Styled-components
 - localStorage
-- BEM convention
 
 ## Available Scripts
 
