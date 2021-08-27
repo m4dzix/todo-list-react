@@ -22,23 +22,37 @@ If you want to add a new task to the list, you should:
 
 Task content will show up as a part of the task list.
 
-![AddTasks](src/access/AddTasks.gif)
+![How to add tasks - GIF](src/access/AddTasks.gif)
 
 ### Managing task
 
 - Mark as complete: Click green box on left from task content.
   Second click on confirmed icon will reverse 'completed' animation.
 
-- Remove task: click red icon with trash.
-
 - Mark all tasks as completed: click on button `MARK ALL TASKS AS COMPLETED` on menubar above task list.
+  ![How to completed task - GIF](src/access/completedTask.gif)
 
 - Hide each completed task: click the `HIDE COMPLETED TASKS` button.
   When you click again, all completed tasks will be displayed.
+  ![How to hide and show completed task](src/access/toggleHideCompletedTask.gif)
+
+- Remove task: click red icon with trash.
+
+- Remove all tasks: click on button `REMOVE ALL TASKS`on menubar above task list.
+
+![How to remove tasks - GIF](src/access/removeTasks.gif)
 
 - See task details: click to task content
 
-![Actions](src/access/Actions.gif)
+![How to see task details - GIF](src/access/taskDetails.gif)
+
+- Find a specific task: enter the content of a task into the "filter task" field
+
+![How to filter tasks - GIF](src/access/filterTasks.gif)
+
+- See details about author: click subpage `AUTHOR`
+
+![How to see details about author - GIF](src/access/author.gif)
 
 ## Used technologies:
 
@@ -55,6 +69,7 @@ Task content will show up as a part of the task list.
 - Custom Hooks
 - Styled-components
 - localStorage
+- gifox
 
 ## Available Scripts
 
